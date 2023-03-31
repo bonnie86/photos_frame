@@ -45,12 +45,14 @@
         }
 
         /* 하단 영역 스타일링 */
+        /* 아래 영역 전체는, flexible하게 하되 그 내부 아이템들은 세로로 쌓을거야 */
+/* 근데 모두 가운데 정렬 했으면 좋겠어! */
         .footer {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-
+/* 아래 영역의 제목 부분은 폰트가 좀 두껍고, 사이즈는 25픽셀! 흰색으로 */
         .f-title {
             font-size: 25px;
             font-weight: 900;
@@ -58,7 +60,7 @@
             font-weight: bold;
             text-align: center;
         }
-
+/* 아래 영역의 날짜 부분은 폰트가 중간 두께고, 사이즈는 15픽셀! 흰색으로 */
         .f-date {
             font-size: 15px;
             font-weight: 500;
@@ -81,38 +83,13 @@
             background-image: url("./img4.jpeg");
         }
 
-        .photo-description {
-            color: white;
-            background-color: black;
-            width: fit-content;
-            padding: 0 20px;
-            margin-bottom: 10px;
-            border-radius: 10px;
-            position: absolute;
-            bottom: 0;
-            transform: translate(-50%);
-            left: 50%;
-        }
-
-        /* opacity : 투명도를 의미해요! opacity는 1에 가까워 질 수록 불투명하다. 즉 다 보인다. */
-        .showText {
-            opacity: 1;
-            transition: opacity 0.5s linear;
-        }
-
-        /* opacity : 투명도를 의미해요! opacity는 0에 가까워 질 수록 투명하다. 즉 안보인다. */
-        /* transition : 나타날 때 0.5초동안 천천히 나타나는 효과를 주라는 의미에요 */
-        .hideText {
-            opacity: 0;
-        }
-
         .photo-frame {
             background-color: white;
             margin: 15px 20px;
             height: 200px;
             background-size: cover;
             position: relative;
-            cursor: pointer; //마우스가 사진 위로 올라가면 포인터 아이콘으로 바뀌도록
+             cursor: pointer; /*마우스가 사진 위로 올라가면 포인터 아이콘으로 바뀌도록 */
         }
 
         .photo-description {
@@ -126,7 +103,7 @@
             bottom: 0;
             transform: translate(-50%);
             left: 50%;
-            opacity: 0; //초반에 페이지 열릴 때 기본으로 안보이게 하기 위한 설정이에요
+            opacity: 0; /* 초반에 페이지 열릴 때 기본으로 안보이게 하기 위한 설정이에요 */
         }
 
         .video {
